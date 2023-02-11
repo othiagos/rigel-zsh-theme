@@ -25,11 +25,11 @@ function prompt_char {
 }
 
 function directory {
-    var_dir="%~"
+    local dir="%~"
     if [ "$(git_repo_name)" != "" ];then 
-        var_dir=$(git_repo_name)
+        dir=${$(pwd)/*$(git_repo_name)/$(git_repo_name)}
     fi
-    echo "%{$fg[cyan]%}$var_dir%{$reset_color%} "
+    echo "%{$fg[cyan]%}$dir%{$reset_color%} "
 }
 
 function git_status {
