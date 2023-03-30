@@ -10,7 +10,7 @@
 
 ## **Install**
 ```bash
-wget https://raw.githubusercontent.com/othiagos/rigel-zsh-theme/master/rigel.zsh-theme -P $ZSH_CUSTOM/themes/
+wget https://raw.githubusercontent.com/othiagos/rigel-zsh-theme/master/rigel.zsh-theme -qOP $ZSH_CUSTOM/themes/
 ```
 
 ```bash
