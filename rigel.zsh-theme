@@ -51,8 +51,10 @@ function user_info {
 }
 
 function virtualenv_info {
-    if [ "$VIRTUAL_ENV" != "" ];then
-        echo "%{$fg[blue]%}($(basename $VIRTUAL_ENV))%{$reset_color%} "
+    if [ $VIRTUAL_ENV_DISABLE_PROMPT -eq 0 ];then
+        if [ "$VIRTUAL_ENV" != "" ];then
+            echo "%{$fg[blue]%}($(basename $VIRTUAL_ENV))%{$reset_color%} "
+        fi
     fi
 }
 
