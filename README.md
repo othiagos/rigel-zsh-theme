@@ -8,15 +8,27 @@
 * terminal: [Zsh](https://www.zsh.org/) 
 * framework: [Oh My Zsh](https://ohmyz.sh/)
 
-## **Install**
+### **Download via curl**
 ```bash
-wget https://raw.githubusercontent.com/othiagos/rigel-zsh-theme/master/rigel.zsh-theme -qOP $ZSH_CUSTOM/themes/
+curl https://raw.githubusercontent.com/othiagos/rigel-zsh-theme/master/rigel.zsh-theme -sO --output-dir ./test $ZSH_CUSTOM/themes/
 ```
 
+### **Download via wget**
+```bash
+wget https://raw.githubusercontent.com/othiagos/rigel-zsh-theme/master/rigel.zsh-theme -qP $ZSH_CUSTOM/themes/
+```
+
+### **Set Rigel Theme**
 ```bash
 sed -i 's/ZSH_THEME="\([^"]\|\\"\)*"/ZSH_THEME="rigel"/g' ~/.zshrc
 ```
-need to restart terminal to see change
+
+#### **Add the following to `~/.zshrc`**
+Use 0 to enable the visualization of the virtual environment, any other value is considered as disabled
+
+```bash
+export VIRTUAL_ENV_DISABLE_PROMPT=0
+```
 
 ## **Git Status**
 
@@ -29,4 +41,4 @@ need to restart terminal to see change
 > `[$]`	Displayed when there are stashed changes.  
 > `[⇡]`	Displayed when the local branch is ahead of remote.  
 > `[⇣]`	Displayed when the local branch is behind remote.  
-> `[⇕]`	Displayed when the local and remote branches have   diverged.
+> `[⇕]`	Displayed when the local and remote branches have diverged.
