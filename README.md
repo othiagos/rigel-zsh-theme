@@ -10,7 +10,7 @@
 
 ### **Download via curl**
 ```bash
-curl https://raw.githubusercontent.com/othiagos/rigel-zsh-theme/master/rigel.zsh-theme -sO --output-dir ./test $ZSH_CUSTOM/themes/
+curl https://raw.githubusercontent.com/othiagos/rigel-zsh-theme/master/rigel.zsh-theme -sO --output-dir $ZSH_CUSTOM/themes/
 ```
 
 ### **Download via wget**
