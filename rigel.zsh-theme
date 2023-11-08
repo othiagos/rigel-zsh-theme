@@ -50,5 +50,11 @@ function user_info {
     fi
 }
 
-PROMPT='$newline$(user_info)$(directory)$(git_info)$newline$(prompt_char)'
+function virtualenv_info {
+    if [ "$VIRTUAL_ENV" != "" ];then
+        echo "%{$fg[blue]%}($(basename $VIRTUAL_ENV))%{$reset_color%} "
+    fi
+}
+
+PROMPT='$newline$(virtualenv_info)$(user_info)$(directory)$(git_info)$newline$(prompt_char)'
 RPROMPT=''
